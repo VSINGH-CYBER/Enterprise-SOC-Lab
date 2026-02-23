@@ -75,3 +75,35 @@ Recommended screenshots:
 ### DC01 VM Created
 ![DC01 VM Created](screenshots/03_dc01_vm_created.png)
 
+## DC01 Infrastructure Provisioning
+
+### Purpose
+DC01 will serve as the primary Domain Controller for the Enterprise SOC Lab environment. It will later host:
+- Active Directory Domain Services (AD DS)
+- DNS
+- Group Policy (GPOs)
+- Centralized user/admin identity management
+
+### Configuration Decisions
+| Component | Value |
+|---|---|
+| VM Name | DC01 |
+| OS | Windows Server 2022 (Evaluation ISO) |
+| CPU | 2 vCPU (2 cores) |
+| RAM | 4 GB |
+| Disk | 60 GB (Thin provisioned) |
+| Disk Bus | SCSI (LSI Logic SAS) |
+| Network | VMnet1 (Host-Only) |
+| Firmware | UEFI |
+| Storage Location | E:\Enterprise-SOC-Lab\VMs\DC01 |
+
+### Why This Matters
+- **Host-only networking** isolates lab traffic from the home network (safe attacker testing later).
+- **Static addressing (DHCP disabled)** keeps logs consistent for SIEM + investigations.
+- **Thin-provisioned disk** saves space while allowing growth (snapshots + logs).
+
+### Evidence
+![VMnet1 Configuration](screenshots/01_vmnet1_configuration.png)  
+![DC01 Final VM Summary](screenshots/02_dc01_final_vm_summary.png)  
+![DC01 VM Created](screenshots/03_dc01_vm_created.png)
+
