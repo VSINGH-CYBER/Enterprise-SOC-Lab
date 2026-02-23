@@ -64,7 +64,14 @@ Recommended screenshots:
 | WAZUH-01 | SIEM | 192.168.100.30 |
 | KALI-01 | Attacker | 192.168.100.40 |
 
-### Evidence
+## Evidence
 
+### VMware Network (VMnet1)
 ![VMnet1 Configuration](screenshots/01_vmnet1_configuration.png)
+
+### DC01 VM Summary
+![DC01 Final VM Summary](screenshots/02_dc01_final_vm_summary.png)
+
+### DC01 VM Created
+![DC01 VM Created](screenshots/03_dc01_vm_created.png)
 
